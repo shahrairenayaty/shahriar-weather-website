@@ -8,7 +8,7 @@ messageTwo.textContent = ''
 weatherFrom.addEventListener('submit', (e) => {
     e.preventDefault();
     const location =search.value
-    const url = 'http://localhost:5000/weather?address='+location;
+    const url = '/weather?address='+location;
     messageOne.textContent = 'loading...' 
     fetch(url).then((res) => {
     res.json().then((data) => {
